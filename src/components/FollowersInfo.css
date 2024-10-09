@@ -1,0 +1,21 @@
+.infoProfile_conteiner{
+  display: flex;
+  justify-content: space-evenly;
+}
+.infoProfile_conteiner h2{
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+}
+.infoProfile_conteiner p{
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  color: var(--dark-grayish-blue);
+  font-weight: 600;
+  margin-top: -10px;
+  letter-spacing: 1.5px;
+}
+.firstContainer, .secondBlock, .thirdBlock{
+  width: 100px;
+}
