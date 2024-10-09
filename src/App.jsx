@@ -1,35 +1,40 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import './App.css';
+import img_back from './components/img/bg-pattern-card.svg';
+import img_circle1 from './components/img/bg-pattern-top.svg';
+import img_circle2 from './components/img/bg-pattern-bottom.svg';
+import PhotoProfile from './components/photoProfile';
+import ProfileInfo from './components/ProfileInfo';
+import FollowersInfo from './components/FollowersInfo';
 
-function App() {
-  const [count, setCount] = useState(0)
-
+const App = () => {
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <div className='circle1'>
+        <img src={img_circle1} alt="circle1-background"/>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+      <div className='card_container'>
+        <div className='header_container'>
+          <img className='card-img-background' src={img_back} alt="image1-background" />
+        </div>
+        <div className='info_perfil'>
+          <PhotoProfile />
+          <ProfileInfo
+            name="Victor Crest"
+            age={26}
+            country="London"
+          />
+          <FollowersInfo
+            followers="80K"
+            likes="803K"
+            photos="1.4K"
+          />
+        </div>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <div className='circle2'>
+        <img src={img_circle2} alt="circle2-background"/>
+      </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

@@ -1,42 +1,45 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.card_container{
+  width: 350px;
+  height: 350px;
+  border: none;
+  border-radius: 10px;
+  background-color: var(--white);
+  position: relative;
+  z-index: 2;
 }
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+.card-img-background{
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+.circle2{
+  position: absolute;
+  width: 300px; /* Ajusta el tamaño del círculo como prefieras */
+  height: 500px; /* Ajusta el tamaño del círculo como prefieras */
+  top: 90%; /* Ajusta la posición vertical del círculo */
+  right: 20%; /* Ajusta la posición horizontal del círculo */
+  transform: translate(-50%, -50%); /* Centra el círculo */
+  z-index: 0; /* Asegura que esté detrás del contenido */
 }
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.circle1{
+  position: absolute;
+  width: -300px; /* Ajusta el tamaño del círculo como prefieras */
+  top: -9%; /* Ajusta la posición vertical del círculo */
+  left: 10%; /* Ajusta la posición horizontal del círculo */
+  transform: translate(-50%, -50%); /* Centra el círculo */
+  z-index: 1; /* Asegura que esté detrás del contenido */
 }
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (min-width: 375px) {
+  .card_container{
+    width: 300px;
   }
-  to {
-    transform: rotate(360deg);
+  .circle2{
+    position: absolute;
+    width: 100px; /* Ajusta el tamaño del círculo como prefieras */
+    height: 500px; /* Ajusta el tamaño del círculo como prefieras */
+    top: 90%; /* Ajusta la posición vertical del círculo */
+    right: 20%; /* Ajusta la posición horizontal del círculo */
+    transform: translate(-50%, -50%); /* Centra el círculo */
+    z-index: 0; /* Asegura que esté detrás del contenido */
   }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }
